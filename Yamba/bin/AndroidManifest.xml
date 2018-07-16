@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cisco.android.yamba"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="17" />
+
+    <!-- defining a new permission -->
+
+
+    <!--
+	<permission-group
+        android:name="alier.permission.yamba"
+        android:label="Yamba" />
+    <permission
+        android:name="alier.permission.yamba.READ"
+        android:permissionGroup="alier.permission.yamba"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="alier.permission.yamba.WRITE"
+        android:permissionGroup="alier.permission.yamba"
+        android:protectionLevel="dangerous" />
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".YambaApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cisco.android.yamba.StatusActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.cisco.android.yamba.TimelineActivity"
+            android:label="@string/app_name" >
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".svc.YambaService"
+            android:exported="false">
+            <!--  android:permission="alier.permission.yamba.WRITE" -->
+        </service>
+
+        <provider
+            android:name=".data.YambaProvider"
+            android:authorities="com.cisco.android.yamba.timeline"
+            android:exported="false" >
+            <!-- android:readPermission="alier.permission.yamba.READ" -->
+            <!-- android:writePermission="alier.permission.yamba.WRITE" --> 
+        </provider>
+    </application>
+
+</manifest>

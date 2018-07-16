@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    tools:context=".StatusActivity" >
+
+    <TextView
+        android:id="@+id/banner"
+        style="@style/YambaBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/banner" />
+
+    <TextView
+        android:id="@+id/count"
+        style="@style/YambaSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/count"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:id="@+id/input"
+        style="@style/YambaSmall"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/fog"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:hint="@string/welcomeMsg" 
+        android:maxLength="140"/>
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/YambaMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/submit" />
+
+</LinearLayout>

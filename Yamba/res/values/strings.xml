@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Yamba</string>
+    <string name="action_settings">Settings</string>
+    <string name="banner">Status</string>
+    <string name="count">140</string>
+    <string name="input">Input your status here</string>
+    <string name="submit">submit</string>
+    <string name="welcomeMsg">what\'s up(in 140 words or less)</string>
+    
+    <!-- MENUS -->
+    <string name="timeline_option">Timeline</string>
+    <string name="status_option">Status</string>
+    <string name="about_option">About</string>
+    <string name="about_description">"Written by Alier :)"</string>
+
+</resources>

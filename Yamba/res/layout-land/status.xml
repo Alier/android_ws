@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_land"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    tools:context=".StatusActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/banner"
+            style="@style/YambaBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/banner" />
+
+        <TextView
+            android:id="@+id/count"
+            style="@style/YambaSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/banner"
+            android:text="@string/count" 
+            android:textColor="@color/green"/>
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/YambaMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/submit" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:background="@color/fog"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:hint="@string/welcomeMsg"
+        style="@style/YambaSmall" />
+
+</LinearLayout>
